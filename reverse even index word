@@ -1,0 +1,29 @@
+#include <iostream>
+using namespace std;
+int main(){
+  int n;
+  cin>>n;
+  
+  string arr[n];
+  
+  for(int i=0;i<n;i++){
+      cin>>arr[i];
+  }
+  
+  string ans=" ";
+  
+  for(int i=0;i<n;i++){
+      if(i%2==0){
+          string word=arr[i];
+          for(int j=word.length()-1;j>=0;j--){
+              ans= ans+word[j];
+          }
+          ans+=" ";
+      }
+     
+  }
+  
+ 
+   cout<<ans;
+    return 0;
+}
