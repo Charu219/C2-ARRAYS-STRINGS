@@ -1,0 +1,24 @@
+#include <iostream>
+#include <sstream>
+using namespace std;
+int main(){
+  string sen;
+  getline(cin,sen);
+  
+  string dword;
+  cin>>dword;
+  
+  string word;
+  
+  stringstream ss(sen);
+  
+  while(ss>>word){
+      if(word==dword){
+          continue;
+      }
+      cout<<word<<" ";
+  }
+ 
+  
+    return 0;
+}
