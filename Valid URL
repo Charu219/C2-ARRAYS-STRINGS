@@ -1,0 +1,31 @@
+#include <iostream>
+#include <string>
+using namespace std;
+int main(){
+    string url;
+    cin>>url;
+    
+    bool valid= true;
+    if(!(url.rfind("http://",0)==0 || url.rfind("https://",0)==0)){
+        valid=false;
+    }
+    
+    for(int i=0;i<url.length();i++){
+        if(url[i]==' '){
+            valid=false;
+            break;
+        }
+    }
+    
+    if(url.find('.')==string::npos){
+        valid= false;
+    }
+    
+    if(valid){
+        cout<<"valid";
+    }
+    else{
+        cout<<"invalid";
+    }
+    
+}
