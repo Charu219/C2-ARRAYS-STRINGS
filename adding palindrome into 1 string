@@ -1,0 +1,31 @@
+#include <iostream>
+#include <sstream>
+using namespace std;
+
+int main() {
+    string sen;
+    getline(cin, sen);
+
+    string word;
+    stringstream ss(sen);
+
+    bool first = true;
+    cout << "[";
+
+    while (ss >> word) {
+        string rev = "";
+
+        for (int i = word.length() - 1; i >= 0; i--) {
+            rev += word[i];
+        }
+
+        if (word == rev) {
+            if (!first) cout << ",";
+            cout << "\"" << word << "\"";
+            first = false;
+        }
+    }
+
+    cout << "]";
+    return 0;
+}
