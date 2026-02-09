@@ -17,7 +17,7 @@ int main(){
         bool found=false;
         for(int j=0;j<word2.length();j++){
             if(word1[i]==word2[j] && !used[j]){
-                used[j]=false;
+                used[j]=true;
                 found=true;
                 break;
             }
